@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UI Suite" verbose="1">
+    <test name="Mobile UI - Android">
+        <classes>
+            <class name="com.mydemo.tests.NavigationTest"/>
+            <class name="com.mydemo.tests.LoginTest"/>
+            <class name="com.mydemo.tests.CatalogTest"/>
+            <class name="com.mydemo.tests.CartTest"/>
+            <class name="com.mydemo.tests.CheckoutTest"/>
+        </classes>
+    </test>
+</suite>
