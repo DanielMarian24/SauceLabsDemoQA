@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="18" passed="18" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-14T17:06:26 EEST" name="API Suite" finished-at="2026-09-14T17:06:35 EEST" duration-ms="9938">
+    <groups>
+    </groups>
+    <test started-at="2026-09-14T17:06:26 EEST" name="Backend API" finished-at="2026-09-14T17:06:35 EEST" duration-ms="9938">
+      <class name="com.mydemo.api.ProductApiTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.mydemo.api.ProductApiTest@eadd4fb]" started-at="2026-09-14T17:06:29 EEST" name="setup" finished-at="2026-09-14T17:06:29 EEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="product404()[pri:0, instance:com.mydemo.api.ProductApiTest@eadd4fb]" started-at="2026-09-14T17:06:29 EEST" name="product404" description="M-API-013 Product 404" finished-at="2026-09-14T17:06:30 EEST" duration-ms="244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- product404 -->
+        <test-method signature="productById()[pri:0, instance:com.mydemo.api.ProductApiTest@eadd4fb]" started-at="2026-09-14T17:06:30 EEST" name="productById" description="M-API-012 Product by ID 200" finished-at="2026-09-14T17:06:30 EEST" duration-ms="529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productById -->
+        <test-method signature="productList()[pri:0, instance:com.mydemo.api.ProductApiTest@eadd4fb]" started-at="2026-09-14T17:06:30 EEST" name="productList" description="M-API-010 Product list paginated 200" finished-at="2026-09-14T17:06:30 EEST" duration-ms="223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productList -->
+        <test-method signature="productStructure()[pri:0, instance:com.mydemo.api.ProductApiTest@eadd4fb]" started-at="2026-09-14T17:06:30 EEST" name="productStructure" description="M-API-011 Product structure types" finished-at="2026-09-14T17:06:31 EEST" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productStructure -->
+        <test-method signature="searchMultiple()[pri:0, instance:com.mydemo.api.ProductApiTest@eadd4fb]" started-at="2026-09-14T17:06:31 EEST" name="searchMultiple" description="M-API-016 Search multiple terms" finished-at="2026-09-14T17:06:31 EEST" duration-ms="662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchMultiple -->
+        <test-method signature="searchNoMatch()[pri:0, instance:com.mydemo.api.ProductApiTest@eadd4fb]" started-at="2026-09-14T17:06:31 EEST" name="searchNoMatch" description="M-API-015 Search non-matching still 200" finished-at="2026-09-14T17:06:32 EEST" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchNoMatch -->
+        <test-method signature="searchPlier()[pri:0, instance:com.mydemo.api.ProductApiTest@eadd4fb]" started-at="2026-09-14T17:06:32 EEST" name="searchPlier" description="M-API-014 Search Plier" finished-at="2026-09-14T17:06:32 EEST" duration-ms="225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchPlier -->
+      </class> <!-- com.mydemo.api.ProductApiTest -->
+      <class name="com.mydemo.api.AuthApiTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.mydemo.api.AuthApiTest@5b799640]" started-at="2026-09-14T17:06:26 EEST" name="setup" finished-at="2026-09-14T17:06:26 EEST" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="getProfile()[pri:0, instance:com.mydemo.api.AuthApiTest@5b799640]" started-at="2026-09-14T17:06:26 EEST" name="getProfile" description="M-API-007 Get profile 200" finished-at="2026-09-14T17:06:27 EEST" duration-ms="1362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProfile -->
+        <test-method signature="loginEmpty()[pri:0, instance:com.mydemo.api.AuthApiTest@5b799640]" started-at="2026-09-14T17:06:27 EEST" name="loginEmpty" description="M-API-006 Login empty 401" finished-at="2026-09-14T17:06:27 EEST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginEmpty -->
+        <test-method signature="loginHappyPath()[pri:0, instance:com.mydemo.api.AuthApiTest@5b799640]" started-at="2026-09-14T17:06:27 EEST" name="loginHappyPath" description="M-API-004 Login happy path 200 + token" finished-at="2026-09-14T17:06:28 EEST" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginHappyPath -->
+        <test-method signature="loginInvalid()[pri:0, instance:com.mydemo.api.AuthApiTest@5b799640]" started-at="2026-09-14T17:06:28 EEST" name="loginInvalid" description="M-API-005 Login invalid 401" finished-at="2026-09-14T17:06:28 EEST" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInvalid -->
+        <test-method signature="profileInvalidToken()[pri:0, instance:com.mydemo.api.AuthApiTest@5b799640]" started-at="2026-09-14T17:06:28 EEST" name="profileInvalidToken" description="M-API-008 Profile invalid token 401" finished-at="2026-09-14T17:06:28 EEST" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- profileInvalidToken -->
+        <test-method signature="profileMissingToken()[pri:0, instance:com.mydemo.api.AuthApiTest@5b799640]" started-at="2026-09-14T17:06:28 EEST" name="profileMissingToken" description="M-API-009 Profile missing token 401" finished-at="2026-09-14T17:06:28 EEST" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- profileMissingToken -->
+        <test-method signature="registerExistingEmail()[pri:0, instance:com.mydemo.api.AuthApiTest@5b799640]" started-at="2026-09-14T17:06:28 EEST" name="registerExistingEmail" description="M-API-002 Register existing email 409" finished-at="2026-09-14T17:06:29 EEST" duration-ms="425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerExistingEmail -->
+        <test-method signature="registerNewUser()[pri:0, instance:com.mydemo.api.AuthApiTest@5b799640]" started-at="2026-09-14T17:06:29 EEST" name="registerNewUser" description="M-API-001 Register new user 201" finished-at="2026-09-14T17:06:29 EEST" duration-ms="563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerNewUser -->
+        <test-method signature="weakPassword()[pri:0, instance:com.mydemo.api.AuthApiTest@5b799640]" started-at="2026-09-14T17:06:29 EEST" name="weakPassword" description="M-API-003 Weak password 422" finished-at="2026-09-14T17:06:29 EEST" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- weakPassword -->
+      </class> <!-- com.mydemo.api.AuthApiTest -->
+      <class name="com.mydemo.api.CartApiTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.mydemo.api.CartApiTest@740fb309]" started-at="2026-09-14T17:06:32 EEST" name="setup" finished-at="2026-09-14T17:06:32 EEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="cartLifecycle()[pri:0, instance:com.mydemo.api.CartApiTest@740fb309]" started-at="2026-09-14T17:06:32 EEST" name="cartLifecycle" description="M-API-017 Full cart lifecycle" finished-at="2026-09-14T17:06:34 EEST" duration-ms="1885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cartLifecycle -->
+        <test-method signature="orderDiscovery()[pri:0, instance:com.mydemo.api.CartApiTest@740fb309]" started-at="2026-09-14T17:06:34 EEST" name="orderDiscovery" description="M-API-018 Order endpoint discovery" finished-at="2026-09-14T17:06:35 EEST" duration-ms="1841" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderDiscovery -->
+      </class> <!-- com.mydemo.api.CartApiTest -->
+    </test> <!-- Backend API -->
+  </suite> <!-- API Suite -->
+</testng-results>

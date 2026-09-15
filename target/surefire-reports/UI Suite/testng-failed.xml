@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [UI Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Mobile UI - Android(failed)" verbose="0">
+    <classes>
+      <class name="com.mydemo.tests.CheckoutTest">
+        <methods>
+          <include name="invalidPaymentBlocked"/>
+          <include name="fullCheckout"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.mydemo.tests.CheckoutTest -->
+      <class name="com.mydemo.tests.CartTest">
+        <methods>
+          <include name="removeItem"/>
+          <include name="addTwoProducts"/>
+          <include name="changeQuantity"/>
+          <include name="tearDown"/>
+          <include name="addToCart"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.mydemo.tests.CartTest -->
+      <class name="com.mydemo.tests.LoginTest">
+        <methods>
+          <include name="invalidCredentialsError"/>
+          <include name="emptyFieldsError"/>
+          <include name="loginHappyPath"/>
+          <include name="tearDown"/>
+          <include name="lockedUserError"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.mydemo.tests.LoginTest -->
+      <class name="com.mydemo.tests.CatalogTest">
+        <methods>
+          <include name="catalogShowsProducts"/>
+          <include name="sortByNameAsc"/>
+          <include name="openProductDetail"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="sortByPriceDesc"/>
+        </methods>
+      </class> <!-- com.mydemo.tests.CatalogTest -->
+      <class name="com.mydemo.tests.NavigationTest">
+        <methods>
+          <include name="sideMenuEntries"/>
+          <include name="tearDown"/>
+          <include name="navigateToAbout"/>
+          <include name="backToCatalog"/>
+          <include name="setUp"/>
+          <include name="catalogLoadsByDefault"/>
+        </methods>
+      </class> <!-- com.mydemo.tests.NavigationTest -->
+    </classes>
+  </test> <!-- Mobile UI - Android(failed) -->
+</suite> <!-- Failed suite [UI Suite] -->

@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>TestNG:  Backend API</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Backend API</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>18/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Sep 14 11:13:56 EEST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>9 seconds (9676 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mydemo.api.AuthApiTest.getProfile()'><b>getProfile</b><br>Test class: com.mydemo.api.AuthApiTest<br>Test method: M-API-007 Get profile 200</td>
+<td></td>
+<td>1</td>
+<td>com.mydemo.api.AuthApiTest@7fd7a283</td></tr>
+<tr>
+<td title='com.mydemo.api.ProductApiTest.searchMultiple()'><b>searchMultiple</b><br>Test class: com.mydemo.api.ProductApiTest<br>Test method: M-API-016 Search multiple terms</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.ProductApiTest@22f59fa</td></tr>
+<tr>
+<td title='com.mydemo.api.AuthApiTest.registerExistingEmail()'><b>registerExistingEmail</b><br>Test class: com.mydemo.api.AuthApiTest<br>Test method: M-API-002 Register existing email 409</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.AuthApiTest@7fd7a283</td></tr>
+<tr>
+<td title='com.mydemo.api.CartApiTest.cartLifecycle()'><b>cartLifecycle</b><br>Test class: com.mydemo.api.CartApiTest<br>Test method: M-API-017 Full cart lifecycle</td>
+<td></td>
+<td>1</td>
+<td>com.mydemo.api.CartApiTest@78fa769e</td></tr>
+<tr>
+<td title='com.mydemo.api.AuthApiTest.profileInvalidToken()'><b>profileInvalidToken</b><br>Test class: com.mydemo.api.AuthApiTest<br>Test method: M-API-008 Profile invalid token 401</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.AuthApiTest@7fd7a283</td></tr>
+<tr>
+<td title='com.mydemo.api.AuthApiTest.loginInvalid()'><b>loginInvalid</b><br>Test class: com.mydemo.api.AuthApiTest<br>Test method: M-API-005 Login invalid 401</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.AuthApiTest@7fd7a283</td></tr>
+<tr>
+<td title='com.mydemo.api.ProductApiTest.productStructure()'><b>productStructure</b><br>Test class: com.mydemo.api.ProductApiTest<br>Test method: M-API-011 Product structure types</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.ProductApiTest@22f59fa</td></tr>
+<tr>
+<td title='com.mydemo.api.AuthApiTest.weakPassword()'><b>weakPassword</b><br>Test class: com.mydemo.api.AuthApiTest<br>Test method: M-API-003 Weak password 422</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.AuthApiTest@7fd7a283</td></tr>
+<tr>
+<td title='com.mydemo.api.ProductApiTest.productList()'><b>productList</b><br>Test class: com.mydemo.api.ProductApiTest<br>Test method: M-API-010 Product list paginated 200</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.ProductApiTest@22f59fa</td></tr>
+<tr>
+<td title='com.mydemo.api.ProductApiTest.searchNoMatch()'><b>searchNoMatch</b><br>Test class: com.mydemo.api.ProductApiTest<br>Test method: M-API-015 Search non-matching still 200</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.ProductApiTest@22f59fa</td></tr>
+<tr>
+<td title='com.mydemo.api.ProductApiTest.product404()'><b>product404</b><br>Test class: com.mydemo.api.ProductApiTest<br>Test method: M-API-013 Product 404</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.ProductApiTest@22f59fa</td></tr>
+<tr>
+<td title='com.mydemo.api.ProductApiTest.productById()'><b>productById</b><br>Test class: com.mydemo.api.ProductApiTest<br>Test method: M-API-012 Product by ID 200</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.ProductApiTest@22f59fa</td></tr>
+<tr>
+<td title='com.mydemo.api.AuthApiTest.profileMissingToken()'><b>profileMissingToken</b><br>Test class: com.mydemo.api.AuthApiTest<br>Test method: M-API-009 Profile missing token 401</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.AuthApiTest@7fd7a283</td></tr>
+<tr>
+<td title='com.mydemo.api.AuthApiTest.registerNewUser()'><b>registerNewUser</b><br>Test class: com.mydemo.api.AuthApiTest<br>Test method: M-API-001 Register new user 201</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.AuthApiTest@7fd7a283</td></tr>
+<tr>
+<td title='com.mydemo.api.ProductApiTest.searchPlier()'><b>searchPlier</b><br>Test class: com.mydemo.api.ProductApiTest<br>Test method: M-API-014 Search Plier</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.ProductApiTest@22f59fa</td></tr>
+<tr>
+<td title='com.mydemo.api.CartApiTest.orderDiscovery()'><b>orderDiscovery</b><br>Test class: com.mydemo.api.CartApiTest<br>Test method: M-API-018 Order endpoint discovery</td>
+<td></td>
+<td>1</td>
+<td>com.mydemo.api.CartApiTest@78fa769e</td></tr>
+<tr>
+<td title='com.mydemo.api.AuthApiTest.loginHappyPath()'><b>loginHappyPath</b><br>Test class: com.mydemo.api.AuthApiTest<br>Test method: M-API-004 Login happy path 200 + token</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.AuthApiTest@7fd7a283</td></tr>
+<tr>
+<td title='com.mydemo.api.AuthApiTest.loginEmpty()'><b>loginEmpty</b><br>Test class: com.mydemo.api.AuthApiTest<br>Test method: M-API-006 Login empty 401</td>
+<td></td>
+<td>0</td>
+<td>com.mydemo.api.AuthApiTest@7fd7a283</td></tr>
+</table><p>
+</body>
+</html>
