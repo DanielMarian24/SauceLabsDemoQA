@@ -6,58 +6,61 @@ Each case maps 1:1 to a TestNG method.
 ## UI (Appium Java+TestNG)
 
 ### M-TC-001 Catalog loads — `NavigationTest#catalogLoadsByDefault`
-Pre: app installed. Steps: launch. Expect: products screen visible, >0 items.
+Pre: app installed. Steps: launch app. Expect: products screen visible, >0 items.
 
 ### M-TC-002 Side menu entries — `NavigationTest#sideMenuEntries`
-Steps: tap open menu. Expect: webview, qr code, geo location, drawing, about visible.
+Steps: launch app -> tap open menu. Expect: webview, qr code, geo location, drawing, about visible.
 
 ### M-TC-003 About — `NavigationTest#navigateToAbout`
-Steps: menu -> About. Expect: About screen.
+Steps: launch app -> menu -> About. Expect: About screen.
 
 ### M-TC-004 Back to catalog — `NavigationTest#backToCatalog`
-Steps: menu -> Catalog. Expect: products screen.
+Steps: launch app -> menu -> Catalog. Expect: products screen.
 
 ### M-TC-005 Login happy — `LoginTest#loginHappyPath` (bob@example.com / 10203040)
-Expect: catalog + menu shows Log Out.
+Steps: launch app -> tap login -> enter valid credentials -> tap login. Expect: catalog + menu shows Log Out.
 
 ### M-TC-006 Locked user — `LoginTest#lockedUserError` (alice@example.com)
-Expect: error contains "locked".
+Steps: launch app -> tap login -> enter locked user credentials -> tap login. Expect: error contains "locked".
 
 ### M-TC-007 Invalid creds — `LoginTest#invalidCredentialsError`
-Expect: generic error visible.
+Steps: launch app -> tap login -> enter invalid credentials -> tap login. Expect: generic error visible.
 
 ### M-TC-008 Empty fields — `LoginTest#emptyFieldsError`
-Expect: error visible.
+Steps: launch app -> tap login -> leave fields empty -> tap login. Expect: error visible.
 
 ### M-TC-009 Catalog products — `CatalogTest#catalogShowsProducts`
-Expect: >=2 items, first name non-blank.
+Steps: launch app -> tap catalog. Expect: >=2 items, first name non-blank.
 
 ### M-TC-010 Sort NameAsc — `CatalogTest#sortByNameAsc`
-Steps: Sort -> NameAsc. Expect: list still loaded.
+Steps: launch app -> tap catalog -> sort -> NameAsc. Expect: list still loaded.
 
 ### M-TC-011 Sort PriceDesc — `CatalogTest#sortByPriceDesc`
-Expect: products visible after sort.
+Steps: launch app -> tap catalog -> sort -> PriceDesc. Expect: products visible after sort.
 
 ### M-TC-012 Detail — `CatalogTest#openProductDetail`
-Steps: tap first item. Expect: detail name == list name, price non-blank.
+Steps: launch app -> tap catalog -> tap first item. Expect: detail name == list name, price non-blank.
 
 ### M-TC-013 Add to cart — `CartTest#addToCart`
-Expect: cart 1 item.
+Steps: launch app -> tap catalog -> tap first item -> tap add to cart. Expect: cart 1 item.
 
 ### M-TC-014 Qty total — `CartTest#changeQuantity`
-Steps: increase qty. Expect: total changes.
+Steps: launch app -> tap catalog -> add item to cart -> go to cart -> increase qty. Expect: total changes.
 
 ### M-TC-015 Remove — `CartTest#removeItem`
-Expect: cart empty.
+Steps: launch app -> tap catalog -> add item to cart -> go to cart -> remove item. Expect: cart empty.
 
 ### M-TC-016 Two products — `CartTest#addTwoProducts`
-Steps: add index 0 + 1. Expect: 2 items.
+Steps: launch app -> tap catalog -> add index 0 + 1. Expect: 2 items.
 
 ### M-TC-017 Full checkout — `CheckoutTest#fullCheckout`
-Steps: add -> cart -> checkout -> login (if asked) -> address John Doe/123 Main St/San Jose/95110/US -> payment 4111111111111111 12/30 123 -> Place Order. Expect: Checkout Complete.
+Steps: launch app -> tap catalog -> add item to cart -> go to cart -> checkout -> login (if asked) -> address John Doe/123 Main St/San Jose/95110/US -> payment 4111111111111111 12/30 123 -> Place Order. Expect: Checkout Complete.
 
 ### M-TC-018 Bad payment blocked — `CheckoutTest#invalidPaymentBlocked`
-Steps: same with card 1/1/1. Expect: NOT complete.
+Steps: launch app -> tap catalog -> add item to cart -> go to cart -> checkout -> login (if asked) -> address John Doe/123 Main St/San Jose/95110/US -> payment 1/1/1 -> Place Order. Expect: NOT complete.
+
+### M-TC-019 Add product with quantity — `CartTest#addToCartWithQuantity`
+Steps: launch app -> tap catalog -> tap first item -> select quantity (2 or more) -> tap add to cart. Expect: cart shows correct quantity of items.
 
 ## API (RestAssured)
 

@@ -8,6 +8,8 @@ public class ProductDetailPage extends BasePage {
     private final By productPrice = idd("priceTV");
     private final By addToCartBtn = idd("cartBt");
     private final By increaseQtyBtn = aid("Increase item quantity");
+    private final By decreaseQtyBtn = aid("Decrease item quantity");
+    private final By quantityPicker = idd("quantityTV");
     private final By cartIcon = aid("View cart");
 
     public ProductDetailPage(AndroidDriver driver, int timeoutSec) {
@@ -34,6 +36,16 @@ public class ProductDetailPage extends BasePage {
         for (int i = 0; i < times; i++) {
             click(increaseQtyBtn);
         }
+    }
+
+    public void decreaseQuantity(int times) {
+        for (int i = 0; i < times; i++) {
+            click(decreaseQtyBtn);
+        }
+    }
+
+    public int getQuantity() {
+        return Integer.parseInt(text(quantityPicker));
     }
 
     public void openCart() {
